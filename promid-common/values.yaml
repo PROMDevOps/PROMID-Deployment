@@ -1,4 +1,5 @@
 keycloak:
+  fullnameOverride: keycloak
   extraEnv: |
     - name: KEYCLOAK_LOGLEVEL
       value: DEBUG
