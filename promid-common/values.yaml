@@ -19,7 +19,8 @@ keycloak:
     runAsUser: 0
     runAsNonRoot: false
 
-  postgresql:  
+  postgresql:
+    fullnameOverride: keycloak-postgresql
     enabled: true  
     persistence:
       size: 20Gi
