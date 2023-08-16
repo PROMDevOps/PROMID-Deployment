@@ -18,6 +18,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: promjodd-{{ .Values.envAlias }}-konga
+                name: promid-{{ .Values.envAlias }}-konga
                 port:
                   number: 80
