@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kong-ing
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP  
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+      - {{ .Values.domainKonga }}
+      secretName: kong-cert
+  rules:
+    - host: {{ .Values.domainKonga }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: promjodd-{{ .Values.envAlias }}-konga
+                port:
+                  number: 80

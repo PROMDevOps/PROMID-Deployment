@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: promid-web-cert
+spec:
+  secretName: promid-web-cert
+  dnsNames:
+    - {{ .Values.domainPromIDWeb }}
+  issuerRef:
+    name: lets-encrypt-issuer-prod
+    kind: ClusterIssuer
+    group: cert-manager.io
