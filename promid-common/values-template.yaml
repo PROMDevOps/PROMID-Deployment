@@ -1,0 +1,9 @@
+promid-api:
+  pods:
+    image:
+      tag: "<<image-tag>>"
+
+promid-web:
+  pods:
+    image:
+      tag: "<<image-tag>>"
