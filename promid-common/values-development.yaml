@@ -1,2 +1,26 @@
 envAlias: development
 domainKeycloak: keycloak.promid-dev.prom.co.th
+domainPromIDWeb: promid-dev.prom.co.th
+domainKonga: konga.promid-dev.prom.co.th
+domainKong: api.promid-dev.prom.co.th
+domainPgAdmin: pgweb.promid-dev.prom.co.th
+
+promid-api:
+  ingress:
+    enabled: false
+
+  pods:
+    env:
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
+
+      - name: JAEGER_AGENT_HOST
+        value: "http://tempo.tempo.svc.cluster.local"
+
+      - name: JAEGER_AGENT_PORT
+        value: "4317"
+
+promid-web:
+  ingress:
+    enabled: false

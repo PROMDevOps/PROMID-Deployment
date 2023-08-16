@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: promid-web-ing
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+      - {{ .Values.domainPromIDWeb }}
+      secretName: promid-web-cert
+  rules:
+    - host: {{ .Values.domainPromIDWeb }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: promid-{{ .Values.envAlias }}-promid-web
+                port:
+                  number: 80

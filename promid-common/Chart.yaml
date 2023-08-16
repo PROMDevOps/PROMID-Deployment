@@ -13,3 +13,28 @@ dependencies:
     version: 18.4.3
     repository: https://codecentric.github.io/helm-charts
     condition: keycloak.enabled
+
+  ### Kong ###
+  - name: kong
+    version: "2.22.0"
+    repository: "https://charts.konghq.com"
+    condition: kong.enabled
+
+  - name: "generic-app"
+    alias: konga
+    condition: konga.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
+  ### PromID Web & API ###
+  - name: "generic-app"
+    alias: promid-api
+    condition: promid-api.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
+  - name: "generic-app"
+    alias: promid-web
+    condition: promid-web.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
