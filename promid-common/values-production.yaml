@@ -24,3 +24,9 @@ promid-api:
 promid-web:
   ingress:
     enabled: false
+
+  pods:
+    env:
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
