@@ -21,6 +21,22 @@ promid-api:
       - name: JAEGER_AGENT_PORT
         value: "4317"
 
+      - name: Keycloak__realm
+        value: "Test"
+
+      - name: Keycloak__auth-server-url
+        value: "http://keycloak-http/"
+
+      - name: Keycloak__resource
+        value: "test-client"
+
+      - name: Keycloak__credentials__secret
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: KEYCLOAK_CREDENTIAL
+            optional: false
+
 promid-web:
   ingress:
     enabled: false
