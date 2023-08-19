@@ -1,9 +1,9 @@
 promid-api:
   pods:
     image:
-      tag: "main-c46a244"
+      tag: "main-07cf3b9"
 
 promid-web:
   pods:
     image:
-      tag: "main-c46a244"
+      tag: "main-07cf3b9"
