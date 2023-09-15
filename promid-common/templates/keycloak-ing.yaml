@@ -32,7 +32,7 @@ metadata:
 spec:
   tls:
     - hosts:
-      - {{ .Values.domainKeycloak }}
+      - {{ .Values.domainKeycloak2 }}
       secretName: keycloak-cert-2
   rules:
     - host: {{ .Values.domainKeycloak2 }}
