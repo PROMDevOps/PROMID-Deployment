@@ -4,6 +4,7 @@ domainPromIDWeb: promid.prom.co.th
 domainKonga: konga.promid.prom.co.th
 domainKong: api.promid.prom.co.th
 domainPgAdmin: pgweb.promid.prom.co.th
+domainKeycloak2: keycloak.chalam-kitchen.com
 
 promid-api:
   ingress:
