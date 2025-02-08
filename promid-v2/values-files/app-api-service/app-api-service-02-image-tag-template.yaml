@@ -1,0 +1,5 @@
+
+app-api-service:
+  pods:
+    image:
+      tag: "<<image-tag>>"

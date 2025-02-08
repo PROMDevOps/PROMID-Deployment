@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: admin-prom-ui-cert
+spec:
+  secretName: admin-prom-ui-cert
+  dnsNames:
+    - {{ .Values.domainAdminPromUI }}
+  issuerRef:
+    name: lets-encrypt-issuer-prod
+    kind: ClusterIssuer
+    group: cert-manager.io

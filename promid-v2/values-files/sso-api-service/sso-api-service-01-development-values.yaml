@@ -1,0 +1,22 @@
+sso-api-service:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 100m
+        memory: 150Mi
+      requests:
+        cpu: 50m
+        memory: 100Mi
+
+    env:
+#      - name: HTTP_PORT
+#        value: "80"
+
+      - name: PORT
+        value: "80"
+
+#      - name: BASE_URL
+#        value: "https://sales-api-dev.prom.co.th"
+

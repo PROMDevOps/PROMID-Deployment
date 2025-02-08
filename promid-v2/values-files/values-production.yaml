@@ -1,0 +1,6 @@
+---
+envAlias: production
+domainSignInPromUI: signin.prom.co.th
+domainAdminPromUI: admin.prom.co.th
+domainAppApiService: app-api.prom.co.th
+domainSsoApiService: sso-api.prom.co.th

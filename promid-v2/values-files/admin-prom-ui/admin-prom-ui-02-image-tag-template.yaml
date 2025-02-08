@@ -1,0 +1,5 @@
+
+admin-prom-ui:
+  pods:
+    image:
+      tag: "<<image-tag>>"

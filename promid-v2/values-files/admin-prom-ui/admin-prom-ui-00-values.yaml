@@ -1,0 +1,24 @@
+
+admin-prom-ui:
+  enabled: true
+  nameOverride: admin-prom-ui
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+
+    image:
+      name: asia-southeast1-docker.pkg.dev/promrub-personal-use/promid/admin-prom-ui
+
+  service:
+    enabled: true
+    ports:
+      - port: 80
+        targetPort: 80
+        protocol: TCP
+        name: http
