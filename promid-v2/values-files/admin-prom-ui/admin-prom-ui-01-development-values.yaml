@@ -1,4 +1,4 @@
-signin-prom-ui:
+admin-prom-ui:
   pods:
     replicas: 1
 
@@ -12,4 +12,7 @@ signin-prom-ui:
 
     env:
       - name: HTTP_PORT
+        value: "80"
+        
+      - name: PORT
         value: "80"

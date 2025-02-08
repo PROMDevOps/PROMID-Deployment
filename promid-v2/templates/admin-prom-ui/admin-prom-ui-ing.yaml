@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: promid-{{ .Values.envAlias }}-admin-prom-ui
+                name: promid-v2-{{ .Values.envAlias }}-admin-prom-ui
                 port:
                   number: 80

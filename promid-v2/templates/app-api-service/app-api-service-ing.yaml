@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: promid-{{ .Values.envAlias }}-app-api-service
+                name: promid-v2-{{ .Values.envAlias }}-app-api-service
                 port:
                   number: 80
