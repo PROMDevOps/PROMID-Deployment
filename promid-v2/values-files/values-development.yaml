@@ -2,5 +2,5 @@
 envAlias: development
 domainSignInPromUI: signin-dev.prom.co.th
 domainAdminPromUI: admin-dev.prom.co.th
-domainAppApiService: app-service-dev.prom.co.th
+domainAppApiService: app-services-dev.prom.co.th
 domainSsoApiService: user-services-dev.prom.co.th
