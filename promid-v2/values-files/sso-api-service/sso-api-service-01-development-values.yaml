@@ -11,12 +11,34 @@ sso-api-service:
         memory: 100Mi
 
     env:
-#      - name: HTTP_PORT
-#        value: "80"
+      - name: HTTP_PORT
+        value: "80"
 
       - name: PORT
         value: "80"
 
-#      - name: BASE_URL
-#        value: "https://sales-api-dev.prom.co.th"
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
 
+      - name: ASPNETCORE_ENVIRONMENT
+        value: "Development"
+
+      - name: IsDev
+        value: "true"
+
+      - name: PostgreSQL_Host
+        value: "postgresql-promid"
+
+      - name: PostgreSQL_Database
+        value: "promid"
+
+      - name: PostgreSQL_User
+        value: "postgres"
+
+      - name: PostgreSQL_Password
+        valueFrom:
+          secretKeyRef:
+            name: promid-postgres-secret
+            key: adminPasswordKey
+            optional: false
