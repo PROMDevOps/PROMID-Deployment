@@ -13,3 +13,6 @@ signin-prom-ui:
     env:
       - name: HTTP_PORT
         value: "80"
+        
+      - name: PORT
+        value: "80"
