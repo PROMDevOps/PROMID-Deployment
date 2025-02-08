@@ -2,4 +2,4 @@
 admin-prom-ui:
   pods:
     image:
-      tag: "main-36c7b57"
+      tag: "v0.0.2"
