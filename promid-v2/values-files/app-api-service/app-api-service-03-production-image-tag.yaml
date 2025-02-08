@@ -2,5 +2,4 @@
 app-api-service:
   pods:
     image:
-      tag: "v0.0.1"
-# Wed Apr  3 03:50:00 UTC 2024
+      tag: "main-5f44db5"
