@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: promid-v2-{{ .Values.envAlias }}-sso-api-service
+                name: promid-v2-{{ .Values.envAlias }}-signin-prom-ui
                 port:
                   number: 80
