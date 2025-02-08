@@ -1,0 +1,5 @@
+
+admin-prom-ui:
+  pods:
+    image:
+      tag: "develop-787d181"

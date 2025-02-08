@@ -1,0 +1,45 @@
+apiVersion: v2
+name: helm-prom-id
+description: A Helm chart for Prom ID
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0"
+
+dependencies:
+  ### pgSQL ###
+  - name: "postgresql"
+    alias: postgresql-promid
+    condition: postgresql-promid.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "15.2.9"
+
+  ### Signin-Prom-UI ###
+  - name: "generic-app"
+    alias: signin-prom-ui
+    condition: signin-prom-ui.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
+  ### Admin Prom UI ###
+  - name: "generic-app"
+    alias: admin-prom-ui
+    condition: admin-prom-ui.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
+  ### SSO API Service ###
+  - name: "generic-app"
+    alias: sso-api-service
+    condition: sso-api-service.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
+  ### App API Service ###
+  - name: "generic-app"
+    alias: app-api-service
+    condition: app-api-service.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"

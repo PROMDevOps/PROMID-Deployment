@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: signin-prom-ui-ing
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.org/client-max-body-size: 50m
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - {{ .Values.domainSignInPromUI }}
+      secretName: signin-prom-ui-cert
+  rules:
+    - host: {{ .Values.domainSignInPromUI }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: promid-{{ .Values.envAlias }}-sso-api-service
+                port:
+                  number: 80

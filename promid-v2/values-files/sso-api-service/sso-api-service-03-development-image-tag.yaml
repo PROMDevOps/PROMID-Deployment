@@ -1,0 +1,5 @@
+
+sso-api-service:
+  pods:
+    image:
+      tag: "v0.0.1"

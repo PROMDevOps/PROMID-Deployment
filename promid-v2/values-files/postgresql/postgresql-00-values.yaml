@@ -1,0 +1,8 @@
+postgresql-promid:
+  enabled: true
+  fullnameOverride: postgresql-promid
+  auth:
+    database: promid
+    existingSecret: promid-postgres-secret
+    secretKeys:
+      adminPasswordKey: adminPasswordKey
