@@ -27,16 +27,16 @@ app-api-service:
       - name: IsDev
         value: "true"
 
-      - name: PostgreSQL_Host
+      - name: PostgreSQL__Host
         value: "postgresql-promid"
 
-      - name: PostgreSQL_Database
+      - name: PostgreSQL__Database
         value: "promid"
 
-      - name: PostgreSQL_User
+      - name: PostgreSQL__User
         value: "postgres"
 
-      - name: PostgreSQL_Password
+      - name: PostgreSQL__Password
         valueFrom:
           secretKeyRef:
             name: promid-postgres-secret
