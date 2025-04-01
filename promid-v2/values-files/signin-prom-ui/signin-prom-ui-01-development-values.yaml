@@ -16,3 +16,6 @@ signin-prom-ui:
 
       - name: PORT
         value: "80"
+
+      - name: API_PATH
+        value: "https://user-services-dev.prom.co.th"
