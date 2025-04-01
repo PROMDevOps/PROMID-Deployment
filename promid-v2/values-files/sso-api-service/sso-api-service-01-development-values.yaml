@@ -42,3 +42,9 @@ sso-api-service:
             name: promid-postgres-secret
             key: adminPasswordKey
             optional: false
+
+      - name: SSO__issuer
+        value: "https://keycloak.promid.prom.co.th/auth/realms/promid-nonprod"
+
+      - name: SSO__signedKeyUrl
+        value: "https://keycloak.promid.prom.co.th/auth/realms/promid-nonprod/protocol/openid-connect/certs"
