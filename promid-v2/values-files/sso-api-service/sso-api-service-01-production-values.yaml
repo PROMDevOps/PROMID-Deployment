@@ -43,8 +43,28 @@ sso-api-service:
             key: adminPasswordKey
             optional: false
 
+      # JWT validation with Keycloak
       - name: SSO__issuer
         value: "https://keycloak.promid.prom.co.th/auth/realms/promid"
 
       - name: SSO__signedKeyUrl
         value: "https://keycloak.promid.prom.co.th/auth/realms/promid/protocol/openid-connect/certs"
+
+      # Authentitication with Keycloak
+      - name: IDP_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_IDP_CLIENT_ID
+
+      - name: IDP_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_IDP_CLIENT_SECRET
+
+      - name: IDP_ENDPOINT
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_IDP_ENDPOINT
