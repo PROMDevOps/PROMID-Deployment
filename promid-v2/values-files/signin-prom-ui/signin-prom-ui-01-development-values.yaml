@@ -19,3 +19,18 @@ signin-prom-ui:
 
       - name: API_PATH
         value: "https://user-services-dev.prom.co.th"
+
+      - name: AUTH_CLIENT_ID
+        value: "dummy"
+
+      - name: AUTH_ENDPOINT
+        value: "https://user-services-dev.prom.co.th/api/Authentication/org/default/action/Login"
+
+      - name: NEXT_PUBLIC_ADMIN_PAGE
+        value: "https://admin-dev.prom.co.th/"
+
+      - name: AUTH_CLIENT_SECRET #API key for SSO API
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_AUTH_API_KEY1
