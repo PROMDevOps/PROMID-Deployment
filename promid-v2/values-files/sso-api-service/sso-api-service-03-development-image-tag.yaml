@@ -2,4 +2,4 @@
 sso-api-service:
   pods:
     image:
-      tag: "develop-b40e2f0"
+      tag: "develop-dcba621"
