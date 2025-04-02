@@ -68,3 +68,28 @@ sso-api-service:
           secretKeyRef:
             name: idp-secret
             key: SSO_IDP_ENDPOINT
+
+      # User management with Keycloak
+      - name: ADMIN_IDP_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_ADMIN_IDP_CLIENT_ID
+
+      - name: ADMIN_IDP_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_ADMIN_IDP_CLIENT_SECRET
+
+      - name: ADMIN_IDP_ENDPOINT
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_ADMIN_IDP_ENDPOINT
+
+      - name: ADMIN_IDP_REALM
+        valueFrom:
+          secretKeyRef:
+            name: idp-secret
+            key: SSO_ADMIN_IDP_REALM
