@@ -2,4 +2,4 @@
 signin-prom-ui:
   pods:
     image:
-      tag: "develop-0462d37"
+      tag: "develop-46abf8e"
