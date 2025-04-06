@@ -34,3 +34,6 @@ signin-prom-ui:
           secretKeyRef:
             name: idp-secret
             key: SSO_AUTH_API_KEY1
+
+      - name: IDP_ENDPOINT
+        value: "https://user-services.prom.co.th/api/IDP/org/default/action/"
