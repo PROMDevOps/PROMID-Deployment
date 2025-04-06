@@ -2,4 +2,4 @@
 sso-api-service:
   pods:
     image:
-      tag: "v0.1.0"
+      tag: "main-4120f60"
