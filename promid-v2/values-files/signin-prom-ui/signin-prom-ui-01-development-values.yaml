@@ -26,9 +26,6 @@ signin-prom-ui:
       - name: AUTH_ENDPOINT
         value: "https://user-services-dev.prom.co.th/api/Authentication/org/default/action/Login"
 
-      - name: NEXT_PUBLIC_ADMIN_PAGE
-        value: "https://admin-dev.prom.co.th/"
-
       - name: AUTH_CLIENT_SECRET #API key for SSO API
         valueFrom:
           secretKeyRef:
@@ -37,3 +34,6 @@ signin-prom-ui:
 
       - name: IDP_ENDPOINT
         value: "https://user-services-dev.prom.co.th/api/IDP/org/default/action/"
+
+      - name: NEXT_PUBLIC_ADMIN_PAGE
+        value: "https://dev.prom.co.th/"
