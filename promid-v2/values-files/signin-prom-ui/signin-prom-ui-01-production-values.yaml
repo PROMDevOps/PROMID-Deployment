@@ -35,5 +35,5 @@ signin-prom-ui:
       - name: IDP_ENDPOINT
         value: "https://user-services.prom.co.th/api/IDP/org/default/action/"
 
-      - name: NEXT_PUBLIC_ADMIN_PAGE
+      - name: ADMIN_PAGE
         value: "https://prom.co.th/"
