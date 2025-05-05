@@ -2,4 +2,4 @@
 admin-prom-ui:
   pods:
     image:
-      tag: "develop-bc13e68"
+      tag: "develop-410e416"
