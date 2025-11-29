@@ -2,4 +2,4 @@
 signin-prom-ui:
   pods:
     image:
-      tag: "v1.0.1"
+      tag: "main-674ea18"
